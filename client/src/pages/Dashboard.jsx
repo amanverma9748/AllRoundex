@@ -4,7 +4,15 @@ import { Sparkle } from 'lucide-react'
 
 const Dashboard = () => {
 
+    const [creations, setCreations] = useState([])
 
+    const getDashboardData = async () => {
+        setCreations(dummyCreationData)
+    }
+
+    useEffect(() => {
+        getDashboardData()
+    }, [])
 
     return (
         <div className='h-full overflow-scroll p-6'>
