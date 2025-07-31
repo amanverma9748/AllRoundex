@@ -1,4 +1,4 @@
-import { Sparkles } from 'lucide-react'
+import { Edit, Sparkles } from 'lucide-react'
 import React, { useState } from 'react'
 
 const WriteArticle = () => {
@@ -22,7 +22,7 @@ const WriteArticle = () => {
                 </div>
                 <p className='mt-6 text-sm font-medium'>Article Topic</p>
 
-                <input type="text" className='w-full p-2 px-3 mt-2 outline-none text-sm rounded-md border border-gray-300' placeholder='The future of artificial intelligence is...' required />
+                <input onChange={(e) => setInput(e.target.value)} value={input} type="text" className='w-full p-2 px-3 mt-2 outline-none text-sm rounded-md border border-gray-300' placeholder='The future of artificial intelligence is...' required />
 
                 <p className='mt-4 text-sm font-medium'>Article Length</p>
 
@@ -32,10 +32,14 @@ const WriteArticle = () => {
                             className={`text-xs px-4 py-1 border rounded-full cursor-pointer ${selectedLength.text === item.text ? 'bg-blue-50 text-blue-700' : 'text-gray-500 border-gray-300'}`} key={index}>{item.text}</span>
                     ))}
                 </div>
-
+                <br />
+                <button className='w-full flex justify-center items-center gap-2 bg-gradient-to-r from-[#226BFF] to-[#65ADFF] text-white px-4 py-2 mt-6 text-sm rounded-lg cursor-pointer'>
+                    <Edit className='w-5' ></Edit>
+                    Generate article
+                </button>
 
             </form>
-            {/*left col*/}
+            {/*right col*/}
             <div>
 
             </div>
