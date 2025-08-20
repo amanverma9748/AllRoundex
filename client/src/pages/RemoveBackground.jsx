@@ -18,7 +18,7 @@ const RemoveBackground = () => {
                 </div>
                 <p className='mt-6 text-sm font-medium'>Upload Image</p>
 
-                <textarea onChange={(e) => setInput(e.target.files[0])} type="file" accept='image/*' className='w-full p-2 px-3 mt-2 outline-none text-sm rounded-md border border-gray-300 text-gray-600' required />
+                <input onChange={(e) => setInput(e.target.files[0])} type="file" accept='image/*' className='w-full p-2 px-3 mt-2 outline-none text-sm rounded-md border border-gray-300 text-gray-600' required />
 
 
                 <p className='text-xs text-gray-500 font-light mt-1'>
